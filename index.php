@@ -2,4 +2,7 @@
 
 require "vendor/autoload.php";
 
-$chessBoard = new \Chess\Board\Board();
+$boardBuilder = new \Chess\Board\Builder\BoardBuilder(new \Chess\Board\Board());
+$boardDirector = new \Chess\Board\Builder\BoardDirector($boardBuilder);
+
+$chessBoard = $boardDirector->build();
