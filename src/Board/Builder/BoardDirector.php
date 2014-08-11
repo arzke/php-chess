@@ -4,6 +4,7 @@ namespace Chess\Board\Builder;
 
 
 use Chess\Piece\Placer\PawnPlacer;
+use Chess\Piece\Placer\RookPlacer;
 
 class BoardDirector {
 
@@ -26,6 +27,7 @@ class BoardDirector {
     public function build()
     {
         $this->builder->place(new PawnPlacer());
+        $this->builder->place(new RookPlacer());
 
         return $this->builder->getBoard();
     }
