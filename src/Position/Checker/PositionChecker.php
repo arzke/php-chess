@@ -8,14 +8,15 @@ use Chess\Position\Position;
 class PositionChecker {
 
     /**
+     * @param array $board
      * @param Position $position
-     * @param int $maxValue
      * @return bool
      */
-    public function isValid(Position $position, $maxValue)
+    public function isValid(array $board, Position $position)
     {
-        $isXValid = $position->getX() >= 0 && $position->getX() < $maxValue;
-        $isYValid = $position->getY() >= 0 && $position->getY() < $maxValue;
-        return $isXValid && $isYValid;
+        if(array_key_exists($position->getX(), $board)) {
+            return array_key_exists($position->getY(), $board[$position->getX()]);
+        }
+        return false;
     }
 } 

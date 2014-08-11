@@ -38,7 +38,7 @@ class Board {
     public function getSquare(Position $position)
     {
         $positionChecker = new PositionChecker();
-        if($positionChecker->isValid($position, self::SIZE)) {
+        if($positionChecker->isValid($this->board, $position)) {
             return $this->board[$position->getX()][$position->getY()];
         }
         throw new \OutOfRangeException('The given coordinates are out of range.');
