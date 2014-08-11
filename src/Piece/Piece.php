@@ -31,6 +31,10 @@ abstract class Piece {
         return $this->color;
     }
 
+    /**
+     * @param int $type
+     * @param int $color
+     */
     public function __construct($type, $color)
     {
         $this->type = $type;
