@@ -3,6 +3,7 @@
 namespace Chess\Board\Builder;
 
 
+use Chess\Piece\Placer\KnightPlacer;
 use Chess\Piece\Placer\PawnPlacer;
 use Chess\Piece\Placer\RookPlacer;
 
@@ -28,6 +29,7 @@ class BoardDirector {
     {
         $this->builder->place(new PawnPlacer());
         $this->builder->place(new RookPlacer());
+        $this->builder->place(new KnightPlacer());
 
         return $this->builder->getBoard();
     }
