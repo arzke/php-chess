@@ -11,4 +11,5 @@ class Knight extends Piece {
     {
         parent::__construct(PieceType::KNIGHT, $color);
     }
-} 
+
+}

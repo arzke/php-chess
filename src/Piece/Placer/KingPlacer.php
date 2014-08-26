@@ -37,4 +37,4 @@ class KingPlacer extends Placer {
         );
     }
 
-} 
+}

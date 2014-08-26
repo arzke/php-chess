@@ -40,4 +40,5 @@ abstract class Piece {
         $this->type = $type;
         $this->color = $color;
     }
-} 
+
+}

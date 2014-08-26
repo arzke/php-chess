@@ -39,4 +39,4 @@ class BoardDirector {
 
         return $this->builder->getBoard();
     }
-} 
+}

@@ -39,4 +39,4 @@ class RookPlacer extends Placer {
         );
     }
 
-} 
+}

@@ -19,4 +19,5 @@ class PositionChecker {
         }
         return false;
     }
-} 
+
+}

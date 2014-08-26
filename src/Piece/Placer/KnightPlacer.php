@@ -39,4 +39,4 @@ class KnightPlacer extends Placer {
         );
     }
 
-} 
+}

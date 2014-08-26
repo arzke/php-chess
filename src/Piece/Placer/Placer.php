@@ -58,4 +58,4 @@ abstract class Placer implements IPlacer {
         return $board;
     }
 
-} 
+}

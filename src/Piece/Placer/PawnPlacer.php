@@ -51,4 +51,4 @@ class PawnPlacer extends Placer {
         );
     }
 
-} 
+}

@@ -39,4 +39,4 @@ class BishopPlacer extends Placer {
         );
     }
 
-} 
+}

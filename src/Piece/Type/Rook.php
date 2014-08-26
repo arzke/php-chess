@@ -11,4 +11,5 @@ class Rook extends Piece {
     {
         parent::__construct(PieceType::ROOK, $color);
     }
-} 
+
+}

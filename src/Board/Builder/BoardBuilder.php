@@ -37,4 +37,4 @@ class BoardBuilder {
         return $this->board;
     }
 
-} 
+}

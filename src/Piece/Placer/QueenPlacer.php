@@ -37,4 +37,4 @@ class QueenPlacer extends Placer {
         );
     }
 
-} 
+}

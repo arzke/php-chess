@@ -9,4 +9,4 @@ interface IPlacer {
 
     public function place(Board $board);
 
-} 
+}

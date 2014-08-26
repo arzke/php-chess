@@ -33,4 +33,4 @@ class Square {
     public function isEmpty() {
         return $this->piece === null;
     }
-} 
+}

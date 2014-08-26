@@ -17,4 +17,4 @@ final class PieceType {
 
     const PAWN = 6;
     
-} 
+}

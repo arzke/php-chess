@@ -40,4 +40,5 @@ class Position {
     {
         return $this->y;
     }
-} 
+
+}

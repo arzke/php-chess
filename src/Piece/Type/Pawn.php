@@ -11,4 +11,5 @@ class Pawn extends Piece {
     {
         parent::__construct(PieceType::PAWN, $color);
     }
-} 
+
+}

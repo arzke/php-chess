@@ -11,4 +11,5 @@ class Bishop extends Piece {
     {
         parent::__construct(PieceType::BISHOP, $color);
     }
-} 
+
+}

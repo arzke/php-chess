@@ -11,4 +11,5 @@ class Queen extends Piece {
     {
         parent::__construct(PieceType::QUEEN, $color);
     }
-} 
+
+}
