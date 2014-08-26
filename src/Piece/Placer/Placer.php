@@ -7,7 +7,7 @@ use Chess\Board\Board;
 use Chess\Color\Color;
 use Chess\Piece\Piece;
 
-abstract class Placer implements IPlacer {
+abstract class Placer implements PlacerInterface {
 
     /**
      * @var array

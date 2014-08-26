@@ -5,7 +5,7 @@ namespace Chess\Piece\Placer;
 
 use Chess\Board\Board;
 
-interface IPlacer {
+interface PlacerInterface {
 
     public function place(Board $board);
 
