@@ -1,4 +1,5 @@
 {
+    "name": "barsene/php-chess",
     "autoload": {
         "psr-4": {"Chess\\": "src/"}
     },
