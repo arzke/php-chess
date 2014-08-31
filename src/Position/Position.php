@@ -18,11 +18,16 @@ class Position {
     /**
      * @param int $x
      * @param int $y
+     * @throws \InvalidArgumentException
      */
     public function __construct($x, $y)
     {
-        $this->x = (int)$x;
-        $this->y = (int)$y;
+        if(!is_int($x) || !is_int($y)) {
+            throw new \InvalidArgumentException('Coordinates must be integer values.');
+        }
+
+        $this->x = $x;
+        $this->y = $y;
     }
 
     /**
