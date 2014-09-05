@@ -30,6 +30,8 @@ class BoardDirector {
      */
     public function build()
     {
+        $this->builder->initBoard();
+
         $this->builder->place(new PawnPlacer());
         $this->builder->place(new RookPlacer());
         $this->builder->place(new KnightPlacer());

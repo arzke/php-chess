@@ -4,6 +4,7 @@ namespace Chess\Board\Builder;
 
 
 use Chess\Board\Board;
+use Chess\Board\Square;
 use Chess\Piece\Placer\PlacerInterface;
 
 class BoardBuilder {
@@ -19,6 +20,12 @@ class BoardBuilder {
     public function __construct(Board $board)
     {
         $this->board = $board;
+    }
+
+    public function initBoard()
+    {
+        $line = array_fill(0, Board::SIZE, new Square());
+        $this->board->setBoard(array_fill(0, Board::SIZE, $line));
     }
 
     /**
