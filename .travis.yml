@@ -10,7 +10,8 @@ env:
 - PHPUNIT_VERSION=3.7.*
 - PHPUNIT_VERSION=4.1.*
 - PHPUNIT_VERSION=4.2.*
-- PHPUNIT_VERSION=4.3.*@dev
+- PHPUNIT_VERSION=4.3.*
+- PHPUNIT_VERSION=4.4.*@dev
 
 cache:
   directories:
