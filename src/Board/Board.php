@@ -11,7 +11,7 @@ class Board {
 
     const SIZE = 8;
 
-    private $board = array();
+    private $board;
 
     /**
      * @param array $board
@@ -29,21 +29,6 @@ class Board {
      */
     public function setAt(Piece $piece, Position $position)
     {
-        $this->getSquare($position)->setPiece($piece);
+        $this->board[$position->getX()][$position->getY()] = $piece;
     }
-
-    /**
-     * @param Position $position
-     * @return \Chess\Board\Square
-     * @throws \OutOfRangeException
-     */
-    public function getSquare(Position $position)
-    {
-        $positionChecker = new PositionChecker();
-        if($positionChecker->isValid($this->board, $position)) {
-            return $this->board[$position->getX()][$position->getY()];
-        }
-        throw new \OutOfRangeException('The given coordinates are out of range.');
-    }
-
 }
