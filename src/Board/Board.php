@@ -4,7 +4,6 @@ namespace Chess\Board;
 
 
 use Chess\Piece\Piece;
-use Chess\Position\Checker\PositionChecker;
 use Chess\Position\Position;
 
 class Board {
