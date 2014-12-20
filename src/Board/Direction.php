@@ -13,4 +13,4 @@ class Direction {
 
     const RIGHT = 'right';
 
-} 
+}
