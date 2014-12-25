@@ -42,7 +42,7 @@ class PieceTest extends PHPUnit_Framework_TestCase {
     /**
      * @param String $type
      * @param String $color
-     * @return \PHPUnit_Framework_MockObject_MockObject
+     * @return \Chess\Piece\Piece
      * @group piece
      */
     private function getPieceMock($type, $color)
