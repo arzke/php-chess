@@ -4,58 +4,44 @@ namespace Chess\Piece\Placer;
 
 
 use Chess\Board\Board;
-use Chess\Color\Color;
-use Chess\Piece\Piece;
+use Chess\Piece\Positioner\PositionerInterface;
 
-abstract class Placer {
-
-    /**
-     * @var array
-     */
-    protected $positions = array();
+class Placer {
 
     /**
-     * @param $color
-     * @return Piece
+     * @var Board
      */
-    abstract protected function getPiece($color);
-
-    /**
-     * @return \Chess\Position\Position[]
-     */
-    abstract protected function getWhitePiecesPositions();
-
-    /**
-     * @return \Chess\Position\Position[]
-     */
-    abstract protected function getBlackPiecesPositions();
-
-    public function __construct()
-    {
-        $this->initPositions();
-    }
-
-    private function initPositions()
-    {
-        $this->positions = array(
-            Color::WHITE => $this->getWhitePiecesPositions(),
-            Color::BLACK => $this->getBlackPiecesPositions()
-        );
-    }
+    private $board;
 
     /**
      * @param Board $board
-     * @return Board
      */
-    public function place(Board $board)
+    public function __construct(Board $board)
     {
-        foreach($this->positions as $color => $positions) {
+        $this->board = $board;
+    }
+
+    /**
+     * @param PositionerInterface $positioner
+     * @return Placer
+     */
+    public function place(PositionerInterface $positioner)
+    {
+        foreach($positioner->getPositions() as $color => $positions) {
             foreach($positions as $position) {
-                $board->setAt($this->getPiece($color), $position);
+                $this->board->setAt($positioner->getPiece($color), $position);
             }
         }
 
-        return $board;
+        return $this;
+    }
+
+    /**
+     * @return Board
+     */
+    public function getBoard()
+    {
+        return $this->board;
     }
 
 }
