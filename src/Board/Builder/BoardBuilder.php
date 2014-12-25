@@ -4,7 +4,6 @@ namespace Chess\Board\Builder;
 
 
 use Chess\Board\Board;
-use Chess\Piece\Placer\PlacerInterface;
 
 class BoardBuilder {
 
@@ -28,9 +27,9 @@ class BoardBuilder {
     }
 
     /**
-     * @param PlacerInterface $placer
+     * @param $placer
      */
-    public function place(PlacerInterface $placer)
+    public function place($placer)
     {
         $this->board = $placer->place($this->board);
     }
