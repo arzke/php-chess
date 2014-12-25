@@ -1,18 +1,18 @@
 <?php
 
-namespace Chess\Piece\Placer;
+namespace Chess\Piece\Positioner;
 
 
 use Chess\Piece\Type\Pawn;
 use Chess\Position\Position;
 
-class PawnPlacer extends Placer {
+class PawnPositioner extends Positioner {
 
     /**
-     * @param $color
+     * @param string $color
      * @return \Chess\Piece\Piece|Pawn
      */
-    protected function getPiece($color)
+    public function getPiece($color)
     {
         return new Pawn($color);
     }

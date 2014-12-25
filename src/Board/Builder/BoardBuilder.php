@@ -4,7 +4,14 @@ namespace Chess\Board\Builder;
 
 
 use Chess\Board\Board;
-use Chess\Piece\Placer\PlacerInterface;
+use Chess\Piece\Placer\Placer;
+use Chess\Piece\Positioner\BishopPositioner;
+use Chess\Piece\Positioner\KingPositioner;
+use Chess\Piece\Positioner\KnightPositioner;
+use Chess\Piece\Positioner\PawnPositioner;
+use Chess\Piece\Positioner\PositionerInterface;
+use Chess\Piece\Positioner\QueenPositioner;
+use Chess\Piece\Positioner\RookPositioner;
 
 class BoardBuilder {
 
@@ -14,25 +21,31 @@ class BoardBuilder {
     private $board;
 
     /**
-     * @param Board $board
+     * @param \Chess\Board\Board $board
      */
     public function __construct(Board $board)
     {
         $this->board = $board;
     }
 
-    public function initBoard()
+    public function initializeBoard()
     {
         $line = array_fill(0, Board::SIZE, null);
         $this->board->setBoard(array_fill(0, Board::SIZE, $line));
     }
 
-    /**
-     * @param PlacerInterface $placer
-     */
-    public function place(PlacerInterface $placer)
+    public function placePiecesOnBoard()
     {
-        $this->board = $placer->place($this->board);
+        $placer = new Placer($this->board);
+
+        $placer->place(new PawnPositioner());
+        $placer->place(new BishopPositioner());
+        $placer->place(new KnightPositioner());
+        $placer->place(new RookPositioner());
+        $placer->place(new QueenPositioner());
+        $placer->place(new KingPositioner());
+
+        $this->board = $placer->getBoard();
     }
 
     /**
