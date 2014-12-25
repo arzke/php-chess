@@ -1,20 +1,20 @@
 <?php
 
-namespace Chess\Piece\Placer;
+namespace Chess\Piece\Positioner;
 
 
-use Chess\Piece\Type\Knight;
+use Chess\Piece\Type\King;
 use Chess\Position\Position;
 
-class KnightPlacer extends Placer {
+class KingPositioner extends Positioner {
 
     /**
-     * @param $color
-     * @return \Chess\Piece\Piece|Knight
+     * @param string $color
+     * @return \Chess\Piece\Piece|King
      */
-    protected function getPiece($color)
+    public function getPiece($color)
     {
-        return new Knight($color);
+        return new King($color);
     }
 
     /**
@@ -23,8 +23,7 @@ class KnightPlacer extends Placer {
     protected function getWhitePiecesPositions()
     {
         return array(
-            new Position(7, 1),
-            new Position(7, 6)
+            new Position(7, 4)
         );
     }
 
@@ -34,8 +33,7 @@ class KnightPlacer extends Placer {
     protected function getBlackPiecesPositions()
     {
         return array(
-            new Position(0, 1),
-            new Position(0, 6)
+            new Position(0, 4)
         );
     }
 

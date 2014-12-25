@@ -1,20 +1,20 @@
 <?php
 
-namespace Chess\Piece\Placer;
+namespace Chess\Piece\Positioner;
 
 
-use Chess\Piece\Type\Bishop;
+use Chess\Piece\Type\Rook;
 use Chess\Position\Position;
 
-class BishopPlacer extends Placer {
+class RookPositioner extends Positioner {
 
     /**
-     * @param $color
-     * @return \Chess\Piece\Piece|Bishop
+     * @param string $color
+     * @return \Chess\Piece\Piece|Rook
      */
-    protected function getPiece($color)
+    public function getPiece($color)
     {
-        return new Bishop($color);
+        return new Rook($color);
     }
 
     /**
@@ -23,8 +23,8 @@ class BishopPlacer extends Placer {
     protected function getWhitePiecesPositions()
     {
         return array(
-            new Position(7, 2),
-            new Position(7, 5)
+            new Position(7, 0),
+            new Position(7, 7)
         );
     }
 
@@ -34,8 +34,8 @@ class BishopPlacer extends Placer {
     protected function getBlackPiecesPositions()
     {
         return array(
-            new Position(0, 2),
-            new Position(0, 5)
+            new Position(0, 0),
+            new Position(0, 7)
         );
     }
 
