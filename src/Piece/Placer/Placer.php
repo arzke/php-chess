@@ -32,16 +32,6 @@ class Placer {
                 $this->board->setAt($positioner->getPiece($color), $position);
             }
         }
-
-        return $this;
-    }
-
-    /**
-     * @return Board
-     */
-    public function getBoard()
-    {
-        return $this->board;
     }
 
 }
