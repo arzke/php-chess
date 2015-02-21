@@ -30,4 +30,13 @@ class Board {
     {
         $this->board[$position->getX()][$position->getY()] = $piece;
     }
+
+    /**
+     * @param Position $position
+     * @return null|Piece
+     */
+    public function getAt(Position $position)
+    {
+        return $this->board[$position->getX()][$position->getY()];
+    }
 }
