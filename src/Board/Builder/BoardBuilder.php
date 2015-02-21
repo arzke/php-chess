@@ -9,7 +9,6 @@ use Chess\Piece\Positioner\BishopPositioner;
 use Chess\Piece\Positioner\KingPositioner;
 use Chess\Piece\Positioner\KnightPositioner;
 use Chess\Piece\Positioner\PawnPositioner;
-use Chess\Piece\Positioner\PositionerInterface;
 use Chess\Piece\Positioner\QueenPositioner;
 use Chess\Piece\Positioner\RookPositioner;
 
