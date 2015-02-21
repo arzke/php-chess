@@ -44,8 +44,6 @@ class BoardBuilder {
         $placer->place(new RookPositioner());
         $placer->place(new QueenPositioner());
         $placer->place(new KingPositioner());
-
-        $this->board = $placer->getBoard();
     }
 
     /**
