@@ -29,10 +29,10 @@ class PlacerTest extends PHPUnit_Framework_TestCase {
      */
     private function getBoard()
     {
-        $board = new Board();
-
         $line = array_fill(0, 8, null);
-        $board->setBoard(array_fill(0, 8, $line));
+        $boardArray = array_fill(0, 8, $line);
+        $board = new Board($boardArray);
+
         return $board;
     }
 

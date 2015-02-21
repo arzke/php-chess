@@ -19,18 +19,11 @@ class BoardBuilder {
      */
     private $board;
 
-    /**
-     * @param \Chess\Board\Board $board
-     */
-    public function __construct(Board $board)
-    {
-        $this->board = $board;
-    }
-
     public function initializeBoard()
     {
         $line = array_fill(0, Board::SIZE, null);
-        $this->board->setBoard(array_fill(0, Board::SIZE, $line));
+        $boardArray = array_fill(0, Board::SIZE, $line);
+        $this->board = new Board($boardArray);
     }
 
     public function placePiecesOnBoard()

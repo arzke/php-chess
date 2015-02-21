@@ -15,7 +15,7 @@ class Board {
     /**
      * @param array $board
      */
-    public function setBoard(array $board)
+    public function __construct(array $board)
     {
         $this->board = $board;
     }
