@@ -3,19 +3,9 @@
 namespace Chess\Piece\Positioner;
 
 
-use Chess\Piece\Type\Rook;
 use Chess\Position\Position;
 
 class RookPositioner extends Positioner {
-
-    /**
-     * @param string $color
-     * @return \Chess\Piece\Piece|Rook
-     */
-    public function getPiece($color)
-    {
-        return new Rook($color);
-    }
 
     /**
      * @return \Chess\Position\Position[]

@@ -3,19 +3,9 @@
 namespace Chess\Piece\Positioner;
 
 
-use Chess\Piece\Type\Knight;
 use Chess\Position\Position;
 
 class KnightPositioner extends Positioner {
-
-    /**
-     * @param string $color
-     * @return \Chess\Piece\Piece|Knight
-     */
-    public function getPiece($color)
-    {
-        return new Knight($color);
-    }
 
     /**
      * @return \Chess\Position\Position[]

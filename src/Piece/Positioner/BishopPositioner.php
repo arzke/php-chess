@@ -3,19 +3,9 @@
 namespace Chess\Piece\Positioner;
 
 
-use Chess\Piece\Type\Bishop;
 use Chess\Position\Position;
 
 class BishopPositioner extends Positioner {
-
-    /**
-     * @param string $color
-     * @return \Chess\Piece\Piece|Bishop
-     */
-    public function getPiece($color)
-    {
-        return new Bishop($color);
-    }
 
     /**
      * @return \Chess\Position\Position[]
