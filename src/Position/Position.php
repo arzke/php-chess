@@ -3,7 +3,8 @@
 namespace Chess\Position;
 
 
-class Position {
+class Position
+{
 
     /**
      * @var int
@@ -22,7 +23,7 @@ class Position {
      */
     public function __construct($x, $y)
     {
-        if(!is_int($x) || !is_int($y)) {
+        if (!is_int($x) || !is_int($y)) {
             throw new \InvalidArgumentException('Coordinates must be integer values.');
         }
 

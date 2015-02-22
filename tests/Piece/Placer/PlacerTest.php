@@ -11,7 +11,8 @@ use Chess\Piece\Type\PieceType;
 use Chess\Position\Position;
 use PHPUnit_Framework_TestCase;
 
-class PlacerTest extends PHPUnit_Framework_TestCase {
+class PlacerTest extends PHPUnit_Framework_TestCase
+{
 
     /**
      * @group placer

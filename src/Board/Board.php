@@ -6,7 +6,8 @@ namespace Chess\Board;
 use Chess\Piece\Piece;
 use Chess\Position\Position;
 
-class Board {
+class Board
+{
 
     const SIZE = 8;
 

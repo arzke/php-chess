@@ -5,7 +5,8 @@ namespace tests\Position;
 
 use Chess\Position\Position;
 
-class PositionTest extends \PHPUnit_Framework_TestCase {
+class PositionTest extends \PHPUnit_Framework_TestCase
+{
 
     /**
      * @group position

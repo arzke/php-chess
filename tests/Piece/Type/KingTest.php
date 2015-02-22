@@ -8,7 +8,8 @@ use Chess\Piece\Type\King;
 use Chess\Piece\Type\PieceType;
 use PHPUnit_Framework_TestCase;
 
-class KingTest extends PHPUnit_Framework_TestCase {
+class KingTest extends PHPUnit_Framework_TestCase
+{
 
     /**
      * @group king

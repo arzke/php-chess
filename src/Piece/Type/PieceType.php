@@ -3,7 +3,8 @@
 namespace Chess\Piece\Type;
 
 
-final class PieceType {
+final class PieceType
+{
 
     const KING = 0;
 
@@ -16,5 +17,5 @@ final class PieceType {
     const KNIGHT = 5;
 
     const PAWN = 6;
-    
+
 }

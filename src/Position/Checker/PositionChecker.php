@@ -5,7 +5,8 @@ namespace Chess\Position\Checker;
 
 use Chess\Position\Position;
 
-class PositionChecker {
+class PositionChecker
+{
 
     /**
      * @param array $board
@@ -14,7 +15,7 @@ class PositionChecker {
      */
     public function isValid(array $board, Position $position)
     {
-        if(array_key_exists($position->getX(), $board)) {
+        if (array_key_exists($position->getX(), $board)) {
             return array_key_exists($position->getY(), $board[$position->getX()]);
         }
         return false;

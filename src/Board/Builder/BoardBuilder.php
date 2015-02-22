@@ -13,7 +13,8 @@ use Chess\Piece\Position\QueenPositions;
 use Chess\Piece\Position\RookPositions;
 use Chess\Piece\Type\PieceType;
 
-class BoardBuilder {
+class BoardBuilder
+{
 
     /**
      * @var \Chess\Board\Board

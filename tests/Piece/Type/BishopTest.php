@@ -8,7 +8,8 @@ use Chess\Piece\Type\Bishop;
 use Chess\Piece\Type\PieceType;
 use PHPUnit_Framework_TestCase;
 
-class BishopTest extends PHPUnit_Framework_TestCase {
+class BishopTest extends PHPUnit_Framework_TestCase
+{
 
     /**
      * @group bishop

@@ -8,7 +8,8 @@ use Chess\Piece\Type\Knight;
 use Chess\Piece\Type\PieceType;
 use PHPUnit_Framework_TestCase;
 
-class KnightTest extends PHPUnit_Framework_TestCase {
+class KnightTest extends PHPUnit_Framework_TestCase
+{
 
     /**
      * @group knight
@@ -33,5 +34,5 @@ class KnightTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(PieceType::KNIGHT, $knight->getType());
         $this->assertSame(Color::BLACK, $knight->getColor());
     }
-    
+
 }

@@ -8,7 +8,8 @@ use Chess\Piece\Type\PieceType;
 use Chess\Piece\Type\Rook;
 use PHPUnit_Framework_TestCase;
 
-class RookTest extends PHPUnit_Framework_TestCase {
+class RookTest extends PHPUnit_Framework_TestCase
+{
 
     /**
      * @group rook

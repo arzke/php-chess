@@ -7,7 +7,8 @@ use Chess\Board\Board;
 use Chess\Piece\Factory\PieceFactory;
 use Chess\Piece\Position\PiecePositions;
 
-class Placer {
+class Placer
+{
 
     /**
      * @var Board
@@ -30,8 +31,8 @@ class Placer {
     public function place(PiecePositions $piecePositions, $pieceType)
     {
         $pieceFactory = new PieceFactory();
-        foreach($piecePositions->getIndexedByColor() as $color => $positions) {
-            foreach($positions as $position) {
+        foreach ($piecePositions->getIndexedByColor() as $color => $positions) {
+            foreach ($positions as $position) {
                 $this->board->setAt($pieceFactory->getPiece($pieceType, $color), $position);
             }
         }

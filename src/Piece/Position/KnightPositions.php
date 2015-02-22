@@ -5,7 +5,8 @@ namespace Chess\Piece\Position;
 
 use Chess\Position\Position;
 
-class KnightPositions extends PiecePositions {
+class KnightPositions extends PiecePositions
+{
 
     /**
      * @return \Chess\Position\Position[]

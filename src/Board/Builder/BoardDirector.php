@@ -3,7 +3,8 @@
 namespace Chess\Board\Builder;
 
 
-class BoardDirector {
+class BoardDirector
+{
 
     /**
      * @var BoardBuilder

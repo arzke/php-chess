@@ -6,7 +6,8 @@ namespace tests\Position\Checker;
 use Chess\Position\Checker\PositionChecker;
 use Chess\Position\Position;
 
-class PositionCheckerTest extends \PHPUnit_Framework_TestCase {
+class PositionCheckerTest extends \PHPUnit_Framework_TestCase
+{
 
     /**
      * @group position

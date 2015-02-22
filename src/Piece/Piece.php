@@ -3,7 +3,8 @@
 namespace Chess\Piece;
 
 
-abstract class Piece {
+abstract class Piece
+{
 
     /**
      * @var int

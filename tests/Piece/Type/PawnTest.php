@@ -7,7 +7,8 @@ use Chess\Color\Color;
 use Chess\Piece\Type\Pawn;
 use Chess\Piece\Type\PieceType;
 
-class PawnTest extends \PHPUnit_Framework_TestCase {
+class PawnTest extends \PHPUnit_Framework_TestCase
+{
 
     /**
      * @group pawn

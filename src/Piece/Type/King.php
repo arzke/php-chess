@@ -5,7 +5,8 @@ namespace Chess\Piece\Type;
 
 use Chess\Piece\Piece;
 
-class King extends Piece {
+class King extends Piece
+{
 
     public function __construct($color)
     {

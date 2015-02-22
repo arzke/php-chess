@@ -3,7 +3,8 @@
 namespace Chess\Board;
 
 
-class Direction {
+class Direction
+{
 
     const UP = 'up';
 
