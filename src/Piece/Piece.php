@@ -34,7 +34,7 @@ abstract class Piece
 
     /**
      * @param int $type
-     * @param int $color
+     * @param string $color
      */
     public function __construct($type, $color)
     {
