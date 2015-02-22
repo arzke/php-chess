@@ -6,7 +6,8 @@ namespace tests\Piece\Placer;
 use Chess\Board\Board;
 use Chess\Color\Color;
 use Chess\Piece\Placer\Placer;
-use Chess\Piece\Type\Pawn;
+use Chess\Piece\Type\King;
+use Chess\Piece\Type\PieceType;
 use Chess\Position\Position;
 use PHPUnit_Framework_TestCase;
 
@@ -19,9 +20,9 @@ class PlacerTest extends PHPUnit_Framework_TestCase {
     {
         $board = $this->getBoard();
         $placer = new Placer($board);
-        $placer->place($this->getPositioner());
+        $placer->place($this->getPositioner(), PieceType::KING);
 
-        $this->assertEquals(new Pawn(Color::WHITE), $board->getAt(new Position(0, 0)));
+        $this->assertEquals(new King(Color::WHITE), $board->getAt(new Position(0, 0)));
     }
 
     /**
@@ -42,12 +43,8 @@ class PlacerTest extends PHPUnit_Framework_TestCase {
     private function getPositioner()
     {
         $positioner = $this->getMockBuilder('\Chess\Piece\Positioner\Positioner')
-            ->setMethods(['getPiece', 'getPositions'])
+            ->setMethods(['getPositions'])
             ->getMockForAbstractClass();
-
-        $positioner->expects($this->once())
-            ->method('getPiece')
-            ->will($this->returnValue(new Pawn(Color::WHITE)));
 
         $positioner->expects($this->once())
             ->method('getPositions')

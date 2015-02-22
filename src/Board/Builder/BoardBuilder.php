@@ -11,6 +11,7 @@ use Chess\Piece\Positioner\KnightPositioner;
 use Chess\Piece\Positioner\PawnPositioner;
 use Chess\Piece\Positioner\QueenPositioner;
 use Chess\Piece\Positioner\RookPositioner;
+use Chess\Piece\Type\PieceType;
 
 class BoardBuilder {
 
@@ -30,12 +31,12 @@ class BoardBuilder {
     {
         $placer = new Placer($this->board);
 
-        $placer->place(new PawnPositioner());
-        $placer->place(new BishopPositioner());
-        $placer->place(new KnightPositioner());
-        $placer->place(new RookPositioner());
-        $placer->place(new QueenPositioner());
-        $placer->place(new KingPositioner());
+        $placer->place(new PawnPositioner(), PieceType::PAWN);
+        $placer->place(new BishopPositioner(), PieceType::BISHOP);
+        $placer->place(new KnightPositioner(), PieceType::KNIGHT);
+        $placer->place(new RookPositioner(), PieceType::ROOK);
+        $placer->place(new QueenPositioner(), PieceType::QUEEN);
+        $placer->place(new KingPositioner(), PieceType::KING);
     }
 
     /**

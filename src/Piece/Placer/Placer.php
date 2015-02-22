@@ -4,6 +4,7 @@ namespace Chess\Piece\Placer;
 
 
 use Chess\Board\Board;
+use Chess\Piece\Factory\PieceFactory;
 use Chess\Piece\Positioner\Positioner;
 
 class Placer {
@@ -23,13 +24,15 @@ class Placer {
 
     /**
      * @param Positioner $positioner
+     * @param string $pieceType
      * @return Placer
      */
-    public function place(Positioner $positioner)
+    public function place(Positioner $positioner, $pieceType)
     {
+        $pieceFactory = new PieceFactory();
         foreach($positioner->getPositions() as $color => $positions) {
             foreach($positions as $position) {
-                $this->board->setAt($positioner->getPiece($color), $position);
+                $this->board->setAt($pieceFactory->getPiece($pieceType, $color), $position);
             }
         }
     }
