@@ -5,7 +5,7 @@ namespace Chess\Piece\Placer;
 
 use Chess\Board\Board;
 use Chess\Piece\Factory\PieceFactory;
-use Chess\Piece\Positioner\Positioner;
+use Chess\Piece\Positioner\PiecePositions;
 
 class Placer {
 
@@ -23,11 +23,11 @@ class Placer {
     }
 
     /**
-     * @param Positioner $positioner
+     * @param PiecePositions $positioner
      * @param string $pieceType
      * @return Placer
      */
-    public function place(Positioner $positioner, $pieceType)
+    public function place(PiecePositions $positioner, $pieceType)
     {
         $pieceFactory = new PieceFactory();
         foreach($positioner->getPositions() as $color => $positions) {

@@ -38,11 +38,11 @@ class PlacerTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return \Chess\Piece\Positioner\Positioner
+     * @return \Chess\Piece\Positioner\PiecePositions
      */
     private function getPositioner()
     {
-        $positioner = $this->getMockBuilder('\Chess\Piece\Positioner\Positioner')
+        $positioner = $this->getMockBuilder('\Chess\Piece\Positioner\PiecePositions')
             ->setMethods(['getPositions'])
             ->getMockForAbstractClass();
 

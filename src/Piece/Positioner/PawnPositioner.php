@@ -5,7 +5,7 @@ namespace Chess\Piece\Positioner;
 
 use Chess\Position\Position;
 
-class PawnPositioner extends Positioner {
+class PawnPositioner extends PiecePositions {
 
     /**
      * @return \Chess\Position\Position[]
