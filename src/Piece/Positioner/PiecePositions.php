@@ -20,7 +20,7 @@ abstract class PiecePositions {
     /**
      * @return array
      */
-    public function getPositions()
+    public function getIndexedByColor()
     {
         return array(
             Color::WHITE => $this->getWhitePiecesPositions(),

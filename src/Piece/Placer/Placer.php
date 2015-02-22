@@ -30,7 +30,7 @@ class Placer {
     public function place(PiecePositions $positioner, $pieceType)
     {
         $pieceFactory = new PieceFactory();
-        foreach($positioner->getPositions() as $color => $positions) {
+        foreach($positioner->getIndexedByColor() as $color => $positions) {
             foreach($positions as $position) {
                 $this->board->setAt($pieceFactory->getPiece($pieceType, $color), $position);
             }
