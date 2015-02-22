@@ -5,12 +5,12 @@ namespace Chess\Board\Builder;
 
 use Chess\Board\Board;
 use Chess\Piece\Placer\Placer;
-use Chess\Piece\Positioner\BishopPositions;
-use Chess\Piece\Positioner\KingPositions;
-use Chess\Piece\Positioner\KnightPositions;
-use Chess\Piece\Positioner\PawnPositions;
-use Chess\Piece\Positioner\QueenPositions;
-use Chess\Piece\Positioner\RookPositions;
+use Chess\Piece\Position\BishopPositions;
+use Chess\Piece\Position\KingPositions;
+use Chess\Piece\Position\KnightPositions;
+use Chess\Piece\Position\PawnPositions;
+use Chess\Piece\Position\QueenPositions;
+use Chess\Piece\Position\RookPositions;
 use Chess\Piece\Type\PieceType;
 
 class BoardBuilder {

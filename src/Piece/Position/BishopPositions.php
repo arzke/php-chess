@@ -1,11 +1,11 @@
 <?php
 
-namespace Chess\Piece\Positioner;
+namespace Chess\Piece\Position;
 
 
 use Chess\Position\Position;
 
-class QueenPositions extends PiecePositions {
+class BishopPositions extends PiecePositions {
 
     /**
      * @return \Chess\Position\Position[]
@@ -13,17 +13,19 @@ class QueenPositions extends PiecePositions {
     protected function getWhitePiecesPositions()
     {
         return array(
-            new Position(7, 3)
+            new Position(7, 2),
+            new Position(7, 5)
         );
     }
 
     /**
      * @return \Chess\Position\Position[]
      */
-    public function getBlackPiecesPositions()
+    protected function getBlackPiecesPositions()
     {
         return array(
-            new Position(0, 3)
+            new Position(0, 2),
+            new Position(0, 5)
         );
     }
 

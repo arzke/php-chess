@@ -5,7 +5,7 @@ namespace Chess\Piece\Placer;
 
 use Chess\Board\Board;
 use Chess\Piece\Factory\PieceFactory;
-use Chess\Piece\Positioner\PiecePositions;
+use Chess\Piece\Position\PiecePositions;
 
 class Placer {
 

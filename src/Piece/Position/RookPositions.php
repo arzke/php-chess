@@ -1,11 +1,11 @@
 <?php
 
-namespace Chess\Piece\Positioner;
+namespace Chess\Piece\Position;
 
 
 use Chess\Position\Position;
 
-class BishopPositions extends PiecePositions {
+class RookPositions extends PiecePositions {
 
     /**
      * @return \Chess\Position\Position[]
@@ -13,8 +13,8 @@ class BishopPositions extends PiecePositions {
     protected function getWhitePiecesPositions()
     {
         return array(
-            new Position(7, 2),
-            new Position(7, 5)
+            new Position(7, 0),
+            new Position(7, 7)
         );
     }
 
@@ -24,8 +24,8 @@ class BishopPositions extends PiecePositions {
     protected function getBlackPiecesPositions()
     {
         return array(
-            new Position(0, 2),
-            new Position(0, 5)
+            new Position(0, 0),
+            new Position(0, 7)
         );
     }
 

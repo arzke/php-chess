@@ -1,6 +1,6 @@
 <?php
 
-namespace Chess\Piece\Positioner;
+namespace Chess\Piece\Position;
 
 
 use Chess\Color\Color;
