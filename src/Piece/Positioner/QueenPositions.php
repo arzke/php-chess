@@ -5,7 +5,7 @@ namespace Chess\Piece\Positioner;
 
 use Chess\Position\Position;
 
-class QueenPositioner extends PiecePositions {
+class QueenPositions extends PiecePositions {
 
     /**
      * @return \Chess\Position\Position[]

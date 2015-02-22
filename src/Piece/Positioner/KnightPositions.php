@@ -5,7 +5,7 @@ namespace Chess\Piece\Positioner;
 
 use Chess\Position\Position;
 
-class RookPositioner extends PiecePositions {
+class KnightPositions extends PiecePositions {
 
     /**
      * @return \Chess\Position\Position[]
@@ -13,8 +13,8 @@ class RookPositioner extends PiecePositions {
     protected function getWhitePiecesPositions()
     {
         return array(
-            new Position(7, 0),
-            new Position(7, 7)
+            new Position(7, 1),
+            new Position(7, 6)
         );
     }
 
@@ -24,8 +24,8 @@ class RookPositioner extends PiecePositions {
     protected function getBlackPiecesPositions()
     {
         return array(
-            new Position(0, 0),
-            new Position(0, 7)
+            new Position(0, 1),
+            new Position(0, 6)
         );
     }
 
