@@ -5,7 +5,7 @@ namespace Chess\Piece\Positioner;
 
 use Chess\Color\Color;
 
-abstract class Positioner implements PositionerInterface {
+abstract class Positioner {
 
     /**
      * @return \Chess\Position\Position[]
