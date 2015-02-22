@@ -1,6 +1,7 @@
 {
     "name": "barsene/php-chess",
     "description": "This is yet another PHP chess.",
+    "license": "GPL-3.0",
     "autoload": {
         "psr-4": {"Chess\\": "src/"}
     },
