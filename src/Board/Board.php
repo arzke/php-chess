@@ -11,6 +11,9 @@ class Board
 
     const SIZE = 8;
 
+    /**
+     * @var array
+     */
     private $board;
 
     /**
