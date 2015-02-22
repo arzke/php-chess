@@ -22,25 +22,22 @@ class PieceFactory
     public function getPiece($pieceType, $color)
     {
         if ($pieceType === PieceType::PAWN) {
-            return new Pawn($color);
-        }
-        if ($pieceType === PieceType::BISHOP) {
-            return new Bishop($color);
-        }
-        if ($pieceType === PieceType::KNIGHT) {
-            return new Knight($color);
-        }
-        if ($pieceType === PieceType::ROOK) {
-            return new Rook($color);
-        }
-        if ($pieceType === PieceType::QUEEN) {
-            return new Queen($color);
-        }
-        if ($pieceType === PieceType::KING) {
-            return new King($color);
+            $piece = new Pawn($color);
+        } elseif ($pieceType === PieceType::BISHOP) {
+            $piece = new Bishop($color);
+        } elseif ($pieceType === PieceType::KNIGHT) {
+            $piece = new Knight($color);
+        } elseif ($pieceType === PieceType::ROOK) {
+            $piece = new Rook($color);
+        } elseif ($pieceType === PieceType::QUEEN) {
+            $piece = new Queen($color);
+        } elseif ($pieceType === PieceType::KING) {
+            $piece = new King($color);
+        } else {
+            throw new \InvalidArgumentException("Can not build piece of unknown type: $pieceType");
         }
 
-        throw new \InvalidArgumentException("Can not build piece of unknown type: $pieceType");
+        return $piece;
     }
 
 }
