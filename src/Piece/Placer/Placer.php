@@ -23,14 +23,14 @@ class Placer {
     }
 
     /**
-     * @param PiecePositions $positioner
+     * @param PiecePositions $piecePositions
      * @param string $pieceType
      * @return Placer
      */
-    public function place(PiecePositions $positioner, $pieceType)
+    public function place(PiecePositions $piecePositions, $pieceType)
     {
         $pieceFactory = new PieceFactory();
-        foreach($positioner->getIndexedByColor() as $color => $positions) {
+        foreach($piecePositions->getIndexedByColor() as $color => $positions) {
             foreach($positions as $position) {
                 $this->board->setAt($pieceFactory->getPiece($pieceType, $color), $position);
             }
