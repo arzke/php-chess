@@ -4,7 +4,7 @@ namespace Chess\Piece\Placer;
 
 
 use Chess\Board\Board;
-use Chess\Piece\Positioner\PositionerInterface;
+use Chess\Piece\Positioner\Positioner;
 
 class Placer {
 
@@ -22,10 +22,10 @@ class Placer {
     }
 
     /**
-     * @param PositionerInterface $positioner
+     * @param Positioner $positioner
      * @return Placer
      */
-    public function place(PositionerInterface $positioner)
+    public function place(Positioner $positioner)
     {
         foreach($positioner->getPositions() as $color => $positions) {
             foreach($positions as $position) {
