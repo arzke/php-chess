@@ -96,13 +96,13 @@ class PieceFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return \Chess\Piece\Type\TypeToClassMapper
+     * @return \Chess\Piece\Type\TypeToClassMapperInterface
      */
     private function getTypeToPieceMapperMock()
     {
-        $typeToPieceMapperMock = $this->getMockBuilder('\Chess\Piece\Type\TypeToClassMapper')
+        $typeToPieceMapperMock = $this->getMockBuilder('\Chess\Piece\Type\TypeToClassMapperInterface')
             ->setMethods(['getClassName'])
-            ->getMock();
+            ->getMockForAbstractClass();
 
         $typeToPieceMapperMock->expects($this->once())
             ->method('getClassName')

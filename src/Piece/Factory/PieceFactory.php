@@ -4,6 +4,7 @@ namespace Chess\Piece\Factory;
 
 
 use Chess\Piece\Type\TypeToClassMapper;
+use Chess\Piece\Type\TypeToClassMapperInterface;
 
 class PieceFactory
 {
@@ -14,9 +15,9 @@ class PieceFactory
     private $typeToClassMapper;
 
     /**
-     * @param TypeToClassMapper $typeToClassMapper
+     * @param TypeToClassMapperInterface $typeToClassMapper
      */
-    public function __construct(TypeToClassMapper $typeToClassMapper)
+    public function __construct(TypeToClassMapperInterface $typeToClassMapper)
     {
         $this->typeToClassMapper = $typeToClassMapper;
     }
