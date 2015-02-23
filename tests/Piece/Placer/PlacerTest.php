@@ -44,12 +44,12 @@ class PlacerTest extends PHPUnit_Framework_TestCase
     private function getPositioner()
     {
         $positioner = $this->getMockBuilder('\Chess\Piece\Position\PiecePositions')
-            ->setMethods(['getIndexedByColor'])
+            ->setMethods(['getAll'])
             ->getMockForAbstractClass();
 
         $positioner->expects($this->once())
-            ->method('getIndexedByColor')
-            ->will($this->returnValue($this->getPositionsIndexedByColor()));
+            ->method('getAll')
+            ->will($this->returnValue($this->getPositions()));
 
         return $positioner;
     }
@@ -57,7 +57,7 @@ class PlacerTest extends PHPUnit_Framework_TestCase
     /**
      * @return array
      */
-    private function getPositionsIndexedByColor()
+    private function getPositions()
     {
         return [
             Color::WHITE => [

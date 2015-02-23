@@ -21,7 +21,7 @@ abstract class PiecePositions
     /**
      * @return array
      */
-    public function getIndexedByColor()
+    public function getAll()
     {
         return array(
             Color::WHITE => $this->getWhitePiecesPositions(),
