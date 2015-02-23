@@ -87,7 +87,7 @@ class PieceFactoryTest extends \PHPUnit_Framework_TestCase
     public function testExceptionIsThrownWhenTryingToCreateUnknownTypeOfPiece()
     {
         $this->setExpectedException('\InvalidArgumentException');
-        var_dump(self::$pieceFactory->getPiece('unknown', Color::WHITE));
+        self::$pieceFactory->getPiece('unknown', Color::WHITE);
     }
 
 }
