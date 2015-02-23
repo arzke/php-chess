@@ -6,6 +6,7 @@ namespace Chess\Piece\Placer;
 use Chess\Board\Board;
 use Chess\Piece\Factory\PieceFactory;
 use Chess\Piece\Position\PiecePositions;
+use Chess\Piece\Type\TypeToClassMapper;
 
 class Placer
 {
@@ -30,7 +31,7 @@ class Placer
      */
     public function place(PiecePositions $piecePositions, $pieceType)
     {
-        $pieceFactory = new PieceFactory();
+        $pieceFactory = new PieceFactory(new TypeToClassMapper());
         foreach ($piecePositions->getIndexedByColor() as $color => $positions) {
             foreach ($positions as $position) {
                 $this->board->setAt($pieceFactory->getPiece($pieceType, $color), $position);

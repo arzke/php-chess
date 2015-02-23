@@ -9,14 +9,26 @@ class PieceFactory
 {
 
     /**
+     * @var TypeToClassMapper
+     */
+    private $typeToClassMapper;
+
+    /**
+     * @param TypeToClassMapper $typeToClassMapper
+     */
+    public function __construct(TypeToClassMapper $typeToClassMapper)
+    {
+        $this->typeToClassMapper = $typeToClassMapper;
+    }
+
+    /**
      * @param $pieceType
      * @param $color
      * @return \Chess\Piece\Piece
      */
     public function getPiece($pieceType, $color)
     {
-        $typeToClassMapper = new TypeToClassMapper();
-        $className = $typeToClassMapper->getClassName($pieceType);
+        $className = $this->typeToClassMapper->getClassName($pieceType);
         if ($className) {
             return new $className($color);
         }

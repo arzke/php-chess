@@ -23,7 +23,7 @@ class PieceFactoryTest extends \PHPUnit_Framework_TestCase
 
     public static function setUpBeforeClass()
     {
-        self::$pieceFactory = new PieceFactory();
+        self::$pieceFactory = new PieceFactory(new TypeToClassMapper());
     }
 
     /**
