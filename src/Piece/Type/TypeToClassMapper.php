@@ -3,7 +3,7 @@
 namespace Chess\Piece\Type;
 
 
-class TypeToClassMapper
+class TypeToClassMapper implements TypeToClassMapperInterface
 {
 
     /**
