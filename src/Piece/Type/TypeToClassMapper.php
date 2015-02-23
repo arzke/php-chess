@@ -7,8 +7,8 @@ class TypeToClassMapper
 {
 
     /**
-     * @param $pieceType
-     * @return mixed
+     * @param string $pieceType
+     * @return string
      */
     public function getClassName($pieceType)
     {
