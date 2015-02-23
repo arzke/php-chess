@@ -12,9 +12,12 @@ use Chess\Piece\Type\Pawn;
 use Chess\Piece\Type\PieceType;
 use Chess\Piece\Type\Queen;
 use Chess\Piece\Type\Rook;
+use Chess\Piece\Type\TypeToClassMapper;
 
 class PieceFactoryTest extends \PHPUnit_Framework_TestCase
 {
+
+    const DUMMY_VALUE = 'dummy value';
 
     /**
      * @var PieceFactory
@@ -86,8 +89,26 @@ class PieceFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testExceptionIsThrownWhenTryingToCreateUnknownTypeOfPiece()
     {
-        $this->setExpectedException('\InvalidArgumentException');
-        self::$pieceFactory->getPiece('unknown', Color::WHITE);
+        $this->setExpectedException('\InvalidArgumentException',
+            'Can not build piece of unknown type: ' . self::DUMMY_VALUE);
+        $pieceFactory = new PieceFactory($this->getTypeToPieceMapperMock());
+        $pieceFactory->getPiece(self::DUMMY_VALUE, Color::WHITE);
+    }
+
+    /**
+     * @return \Chess\Piece\Type\TypeToClassMapper
+     */
+    private function getTypeToPieceMapperMock()
+    {
+        $typeToPieceMapperMock = $this->getMockBuilder('\Chess\Piece\Type\TypeToClassMapper')
+            ->setMethods(['getClassName'])
+            ->getMock();
+
+        $typeToPieceMapperMock->expects($this->once())
+            ->method('getClassName')
+            ->will($this->returnValue(''));
+
+        return $typeToPieceMapperMock;
     }
 
 }
