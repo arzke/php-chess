@@ -9,6 +9,8 @@ use Chess\Piece\Type\TypeToClassMapper;
 class TypeToClassMapperTest extends \PHPUnit_Framework_TestCase
 {
 
+    const DUMMY_STRING = 'dummy string';
+
     /**
      * @var TypeToClassMapper
      */
@@ -86,8 +88,9 @@ class TypeToClassMapperTest extends \PHPUnit_Framework_TestCase
      */
     public function testExceptionIsThrownWhenUnknownPieceTypeIsGiven()
     {
-        $this->setExpectedException('\InvalidArgumentException');
-        self::$typeToClassMapper->getClassName('foo');
+        $this->setExpectedException('\InvalidArgumentException',
+            'No class name mapping for piece type ' . self::DUMMY_STRING);
+        self::$typeToClassMapper->getClassName(self::DUMMY_STRING);
     }
 
 }
