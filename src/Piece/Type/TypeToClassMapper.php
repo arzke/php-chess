@@ -9,6 +9,7 @@ class TypeToClassMapper
     /**
      * @param string $pieceType
      * @return string
+     * @throws \InvalidArgumentException
      */
     public function getClassName($pieceType)
     {
